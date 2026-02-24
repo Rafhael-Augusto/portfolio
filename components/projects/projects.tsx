@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 
+import { useInView } from "@/hooks/useInView";
+
 import { BBH_Hegarty } from "next/font/google";
 
 import { BsFiletypeCsv } from "react-icons/bs";
@@ -13,6 +15,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+
 import ProjectsItem from "../projectsItem/projectsItem";
 
 const smooch_sans = BBH_Hegarty({
@@ -79,8 +82,18 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { ref, isVisible } = useInView<HTMLDivElement>({
+    threshold: 0.4,
+  });
+
   return (
-    <div className="p-16 bg-primary/60">
+    <div
+      ref={ref}
+      className={cn(
+        "p-16 bg-primary/60 opacity-0 transition-all duration-700",
+        isVisible && "opacity-100",
+      )}
+    >
       <h2
         className={cn(
           "underline text-white text-4xl text-center",

@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 
+import { useInView } from "@/hooks/useInView";
+
 import { BBH_Hegarty } from "next/font/google";
 
 import { LaptopView } from "../laptopView/laptopView";
@@ -11,8 +13,18 @@ const smooch_sans = BBH_Hegarty({
 });
 
 export default function About() {
+  const { ref, isVisible } = useInView<HTMLDivElement>({
+    threshold: 0.4,
+  });
+
   return (
-    <div className="flex items-center justify-between p-16 bg-primary/50">
+    <div
+      ref={ref}
+      className={cn(
+        "flex items-center justify-between p-16 bg-primary/50 opacity-0 transition-all duration-700",
+        isVisible && "opacity-100",
+      )}
+    >
       <div className="flex flex-col items-start gap-4 w-1/2">
         <h2
           className={cn("underline text-white text-4xl", smooch_sans.className)}

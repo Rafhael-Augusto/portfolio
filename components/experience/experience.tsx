@@ -1,6 +1,9 @@
 import { cn } from "@/lib/utils";
 
+import { useInView } from "@/hooks/useInView";
+
 import { BBH_Hegarty } from "next/font/google";
+
 import ExperienceItem from "../experienceItem/experienceItem";
 
 const smooch_sans = BBH_Hegarty({
@@ -27,8 +30,18 @@ const experienceList = [
 ];
 
 export default function Experience() {
+  const { ref, isVisible } = useInView<HTMLDivElement>({
+    threshold: 0.4,
+  });
+
   return (
-    <div className="p-16 min-h-220 bg-primary/30">
+    <div
+      ref={ref}
+      className={cn(
+        "p-16 min-h-220 bg-primary/30 opacity-0 transition-all duration-700",
+        isVisible && "opacity-100",
+      )}
+    >
       <h2
         className={cn(
           "underline text-white text-4xl text-center",

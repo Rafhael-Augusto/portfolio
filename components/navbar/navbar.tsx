@@ -30,12 +30,11 @@ type props = {
   setIsLoaded: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function Navbar({ isLoaded, setIsLoaded }: props) {
+export default function Navbar() {
   return (
     <div
       className={cn(
-        "p-4 fixed backdrop-blur-xs top-0 left-0 z-50 w-full bg-transparent opacity-0 transition-all duration-1000 font-bold",
-        isLoaded && "opacity-100",
+        "p-4 fixed backdrop-blur-xs top-0 left-0 z-50 w-full bg-transparent transition-all duration-1000 font-bold",
       )}
     >
       <div className="flex items-center text-white">

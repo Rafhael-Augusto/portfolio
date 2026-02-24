@@ -73,7 +73,7 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
   }, []);
 
   return (
-    <div className="relative h-screen w-screen">
+    <div className="relative h-screen w-screen text-white text-center">
       <video
         className={cn(
           "h-full w-full object-cover opacity-0 transition-all duration-1000",
@@ -89,39 +89,37 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
 
       <div className="absolute h-screen w-screen bg-black/80 bottom-0 left-0" />
 
-      <div className="text-white text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full ">
-          <motion.h1
-            variants={titleVariants}
-            initial="start"
-            animate={titleControls}
-            transition={{ ease: "easeInOut" }}
-            className={cn(smooch_sans.className)}
-          >
-            Web Developer
-          </motion.h1>
-        </div>
-
-        <div className="absolute bottom-5/12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/6 ">
-          <motion.div
-            variants={underlineVariants}
-            initial="start"
-            animate={underlineControls}
-            className="bg-white w-full h-1"
-          />
-        </div>
-
-        <div
-          className={cn(
-            "absolute bottom-1/6 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 opacity-0 transition-all duration-1000",
-            isLoaded && "opacity-100",
-          )}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full ">
+        <motion.h1
+          variants={titleVariants}
+          initial="start"
+          animate={titleControls}
+          transition={{ ease: "easeInOut" }}
+          className={cn(smooch_sans.className)}
         >
-          <p className="text-2xl">
-            Transformando ideias em código limpo, soluções eficientes e
-            experiências digitais memoráveis
-          </p>
-        </div>
+          Web Developer
+        </motion.h1>
+      </div>
+
+      <div className="absolute bottom-5/12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/6 ">
+        <motion.div
+          variants={underlineVariants}
+          initial="start"
+          animate={underlineControls}
+          className="bg-white w-full h-1"
+        />
+      </div>
+
+      <div
+        className={cn(
+          "absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit opacity-0 transition-all duration-1000",
+          isLoaded && "opacity-100",
+        )}
+      >
+        <p className="text-2xl">
+          Transformando ideias em código limpo, soluções eficientes e
+          experiências digitais memoráveis
+        </p>
       </div>
     </div>
   );
