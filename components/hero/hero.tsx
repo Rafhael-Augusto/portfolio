@@ -18,7 +18,7 @@ const titleVariants = {
     transition: { duration: 0.3, delay: 0.6 },
   },
   expanded: {
-    fontSize: "10rem",
+    fontSize: "8rem",
     transition: { duration: 0.6 },
   },
   done: {
