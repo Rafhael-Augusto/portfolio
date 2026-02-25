@@ -40,7 +40,7 @@ const projects = [
     O sistema conta com dashboards interativos para visualização de métricas semanais e mensais, incluindo tarefas concluídas e horas registradas.
 
     Também implementei um cronômetro persistente acessível em todas as páginas, sistema de alertas configuráveis com suporte a tema claro e escuro, priorizando usabilidade e experiência do usuário.`,
-    video: "/background.mp4",
+    video: "/trackly.webm",
     id: 0,
     links: [
       {
@@ -100,7 +100,7 @@ const projects = [
     O site organiza projetos com descrições técnicas, stack utilizada e links externos, além de oferecer navegação responsiva e interface minimalista. 
     
     Construído com Next.js, TypeScript e Tailwind CSS, priorizando performance, reutilização de componentes e organização de código.`,
-    video: "/background.mp4",
+    video: "/portfolio.webm",
     id: 1,
     links: [
       {

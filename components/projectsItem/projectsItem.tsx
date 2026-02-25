@@ -83,17 +83,19 @@ export default function ProjectsItem({ data, handleClick, openId }: props) {
             "absolute h-2/3 w-1/2 top-1/2 hover:scale-100 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default",
         )}
       >
-        <video
-          muted
-          loop
-          ref={videoRef}
-          className={cn(
-            "h-full p-4 w-full object-cover rounded-4xl",
-            openId === data.id && "h-2/3 p-4",
-          )}
-        >
-          <source src="/background.webm" />
-        </video>
+        <div className={cn("p-4 h-full", isOpen && "h-2/3 bg-secondary/5")}>
+          <video
+            muted
+            loop
+            ref={videoRef}
+            className={cn(
+              "h-full w-full object-cover border-4 border-primary rounded-4xl",
+              openId === data.id && "full",
+            )}
+          >
+            <source src={data.video} />
+          </video>
+        </div>
 
         {data.id === openId && (
           <div className="flex flex-col justify-between">
