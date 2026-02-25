@@ -15,7 +15,7 @@ const smooch_sans = BBH_Hegarty({
 const experienceList = [
   {
     company: "DecodeSoftware",
-    role: "Software Engineer",
+    role: "Desenvolvedor full-stack",
     date: "jun 2025 - momento",
     description:
       "Desenvolvimento de aplicações web e automação de processos, atuando em front-end e back-end, com foco em eficiência, qualidade de código e entregas escaláveis.",
@@ -44,7 +44,7 @@ export default function Experience() {
     >
       <h2
         className={cn(
-          "underline text-white text-4xl text-center",
+          "underline text-secondary text-4xl text-center",
           smooch_sans.className,
         )}
       >

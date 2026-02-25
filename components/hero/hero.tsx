@@ -70,10 +70,10 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
     };
 
     startAnimation();
-  }, [videoRef, titleControls, underlineControls]);
+  }, [videoRef, titleControls, underlineControls, setIsLoaded]);
 
   return (
-    <div className="relative h-screen w-screen text-white text-center">
+    <div className="relative h-screen w-screen text-secondary text-center">
       <video
         className={cn(
           "h-full w-full object-cover opacity-0 transition-all duration-1000",
@@ -87,7 +87,7 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
         <source src="/background.webm" />
       </video>
 
-      <div className="absolute h-screen w-screen bg-black/80 bottom-0 left-0" />
+      <div className="absolute h-screen w-screen bg-primary/80 bottom-0 left-0" />
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full ">
         <motion.h1
@@ -97,17 +97,19 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
           transition={{ ease: "easeInOut" }}
           className={cn(smooch_sans.className)}
         >
-          Web Developer
+          Rafhael Augusto
         </motion.h1>
       </div>
 
-      <div className="absolute bottom-5/12 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/6 ">
-        <motion.div
-          variants={underlineVariants}
-          initial="start"
-          animate={underlineControls}
-          className="bg-white w-full h-1"
-        />
+      <div className="absolute w-full bottom-5/12 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+        <div className="flex items-center justify-center">
+          <motion.div
+            variants={underlineVariants}
+            initial="start"
+            animate={underlineControls}
+            className="bg-secondary w-2/4 h-1"
+          />
+        </div>
       </div>
 
       <div

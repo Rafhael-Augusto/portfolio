@@ -1,25 +1,31 @@
+import { useRef, useState } from "react";
+
 import { cn } from "@/lib/utils";
 
 import { useInView } from "@/hooks/useInView";
 
 import { BBH_Hegarty } from "next/font/google";
 
-import { BsFiletypeCsv } from "react-icons/bs";
-import { FaMobileAlt } from "react-icons/fa";
-import { LuPackageSearch } from "react-icons/lu";
 import {
+  SiDailymotion,
   SiGithub,
   SiLucide,
   SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiShadcnui,
   SiTailwindcss,
+  SiThreedotjs,
+  SiThreema,
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
 
+import { ChartAreaIcon } from "lucide-react";
+import { MdAnimation } from "react-icons/md";
+
 import ProjectsItem from "../projectsItem/projectsItem";
-import { useRef, useState } from "react";
 
 const smooch_sans = BBH_Hegarty({
   subsets: ["latin"],
@@ -29,7 +35,7 @@ const smooch_sans = BBH_Hegarty({
 
 const projects = [
   {
-    title: "Scheduler plus",
+    title: "Trackly",
     desc: "Project description",
     video: "/background.mp4",
     id: 0,
@@ -37,12 +43,12 @@ const projects = [
       {
         name: "Github",
         icon: SiGithub,
-        link: "https://github.com/Rafhael-Augusto/Schedule",
+        link: "https://github.com/Rafhael-Augusto/trackly",
       },
       {
         name: "Vercel",
         icon: SiVercel,
-        link: "https://schedule-sable-five.vercel.app/",
+        link: "https://trackly-opal.vercel.app/",
       },
     ],
     tools: [
@@ -55,10 +61,6 @@ const projects = [
         name: "React",
       },
       {
-        icon: FaMobileAlt,
-        name: "PWA",
-      },
-      {
         icon: SiTypescript,
         name: "TypeScript",
       },
@@ -68,25 +70,28 @@ const projects = [
       },
       {
         icon: SiShadcnui,
-        name: "Shadcn",
-      },
-
-      {
-        icon: LuPackageSearch,
-        name: "Zustand",
+        name: "Shadcn/ui",
       },
       {
         icon: SiLucide,
         name: "Lucide",
       },
       {
-        icon: BsFiletypeCsv,
-        name: "Papaparse",
+        icon: ChartAreaIcon,
+        name: "Recharts",
+      },
+      {
+        icon: SiPrisma,
+        name: "Prisma",
+      },
+      {
+        icon: SiPostgresql,
+        name: "Postgresql",
       },
     ],
   },
   {
-    title: "Scheduler plus2",
+    title: "Portfolio",
     desc: "Project description",
     video: "/background.mp4",
     id: 1,
@@ -94,12 +99,12 @@ const projects = [
       {
         name: "Github",
         icon: SiGithub,
-        link: "https://github.com/Rafhael-Augusto/Schedule",
+        link: "https://github.com/Rafhael-Augusto/portfolio",
       },
       {
         name: "Vercel",
         icon: SiVercel,
-        link: "https://schedule-sable-five.vercel.app/",
+        link: "https://rafhael-portfolio-v2.vercel.app/",
       },
     ],
     tools: [
@@ -112,10 +117,6 @@ const projects = [
         name: "React",
       },
       {
-        icon: FaMobileAlt,
-        name: "PWA",
-      },
-      {
         icon: SiTypescript,
         name: "TypeScript",
       },
@@ -125,20 +126,15 @@ const projects = [
       },
       {
         icon: SiShadcnui,
-        name: "Shadcn",
-      },
-
-      {
-        icon: LuPackageSearch,
-        name: "Zustand",
+        name: "Shadcn/ui",
       },
       {
-        icon: SiLucide,
-        name: "Lucide",
+        icon: MdAnimation,
+        name: "Motion",
       },
       {
-        icon: BsFiletypeCsv,
-        name: "Papaparse",
+        icon: SiThreedotjs,
+        name: "React Three Fiber",
       },
     ],
   },

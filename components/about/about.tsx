@@ -27,12 +27,15 @@ export default function About() {
     >
       <div className="flex flex-col items-start gap-4 w-1/2">
         <h2
-          className={cn("underline text-white text-4xl", smooch_sans.className)}
+          className={cn(
+            "underline text-secondary text-4xl",
+            smooch_sans.className,
+          )}
         >
           Sobre mim
         </h2>
 
-        <p className="text-white text-xl">
+        <p className="text-secondary text-xl">
           Sou Rafhael Augusto, formado em Full Stack Python pela EBAC. Meu
           interesse por tecnologia começou aos 13 anos, criando jogos e
           estudando programação de forma autodidata. Aos 17, decidi seguir

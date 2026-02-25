@@ -1,6 +1,9 @@
+import { useEffect, useRef } from "react";
+
 import { cn } from "@/lib/utils";
-import { JSX, useEffect, useMemo, useRef, useState } from "react";
+
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+
 import { IconType } from "react-icons";
 
 type Links = {
@@ -30,14 +33,16 @@ type props = {
 export default function ProjectsItem({ data, handleClick, openId }: props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const handleHoverEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+  const isOpen = openId === data.id;
+
+  const handleHoverEnter = () => {
     if (!videoRef.current) return;
     if (isOpen) return;
 
     videoRef.current.play();
   };
 
-  const handleHoverLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleHoverLeave = () => {
     if (!videoRef.current) return;
     if (isOpen) return;
 
@@ -52,17 +57,11 @@ export default function ProjectsItem({ data, handleClick, openId }: props) {
     }
   };
 
-  const isOpen = useMemo(() => {
-    if (openId === data.id) {
-      return true;
-    } else {
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
-
-      return false;
+  useEffect(() => {
+    if (!isOpen && videoRef.current) {
+      videoRef.current.pause();
     }
-  }, [openId, data.id]);
+  }, [isOpen]);
 
   return (
     <div>
@@ -76,8 +75,8 @@ export default function ProjectsItem({ data, handleClick, openId }: props) {
 
       <div
         onClick={() => handleItemClick()}
-        onMouseEnter={(e) => handleHoverEnter(e)}
-        onMouseLeave={(e) => handleHoverLeave(e)}
+        onMouseEnter={() => handleHoverEnter()}
+        onMouseLeave={() => handleHoverLeave()}
         className={cn(
           "h-104 w-104 z-10 pb-2 overflow-y-scroll hover:scale-105 bg-primary/50 rounded-xl cursor-pointer",
           isOpen &&
