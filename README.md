@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# Portfolio
 
 ## About the Project
 
