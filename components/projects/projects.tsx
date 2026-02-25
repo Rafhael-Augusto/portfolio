@@ -7,7 +7,7 @@ import { useInView } from "@/hooks/useInView";
 import { BBH_Hegarty } from "next/font/google";
 
 import {
-  SiDailymotion,
+  SiBlender,
   SiGithub,
   SiLucide,
   SiNextdotjs,
@@ -17,7 +17,6 @@ import {
   SiShadcnui,
   SiTailwindcss,
   SiThreedotjs,
-  SiThreema,
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
@@ -36,7 +35,11 @@ const smooch_sans = BBH_Hegarty({
 const projects = [
   {
     title: "Trackly",
-    desc: "Project description",
+    desc: `Desenvolvi uma aplicação web full-stack para gerenciamento de tarefas e metas, permitindo criação, edição, exclusão e filtros avançados por status, data e nome.
+
+    O sistema conta com dashboards interativos para visualização de métricas semanais e mensais, incluindo tarefas concluídas e horas registradas.
+
+    Também implementei um cronômetro persistente acessível em todas as páginas, sistema de alertas configuráveis com suporte a tema claro e escuro, priorizando usabilidade e experiência do usuário.`,
     video: "/background.mp4",
     id: 0,
     links: [
@@ -92,7 +95,11 @@ const projects = [
   },
   {
     title: "Portfolio",
-    desc: "Project description",
+    desc: `Portfolio pessoal desenvolvido como aplicação web moderna para apresentação de projetos, tecnologias e experiências. 
+    
+    O site organiza projetos com descrições técnicas, stack utilizada e links externos, além de oferecer navegação responsiva e interface minimalista. 
+    
+    Construído com Next.js, TypeScript e Tailwind CSS, priorizando performance, reutilização de componentes e organização de código.`,
     video: "/background.mp4",
     id: 1,
     links: [
@@ -135,6 +142,10 @@ const projects = [
       {
         icon: SiThreedotjs,
         name: "React Three Fiber",
+      },
+      {
+        icon: SiBlender,
+        name: "Blender",
       },
     ],
   },

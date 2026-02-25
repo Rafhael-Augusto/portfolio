@@ -97,16 +97,19 @@ export default function ProjectsItem({ data, handleClick, openId }: props) {
 
         {data.id === openId && (
           <div className="flex flex-col justify-between">
-            <div className="text-center text-secondary text-2xl font-bold">
+            <div className="text-center text-secondary text-2xl font-bold my-8">
               <h2>{data.title}</h2>
             </div>
 
             <div className="px-8 text-secondary/70 text-xl">
-              <span>{data.desc}</span>
+              <p className="whitespace-pre-line">{data.desc}</p>
 
-              <div className="flex flex-col my-8 gap-4">
+              <div className="flex items-center justify-between my-16 px-16">
                 {data.links.map((item) => (
-                  <div className="flex items-center gap-4 text-cyan-300">
+                  <div
+                    key={item.name}
+                    className="flex items-center gap-4 text-secondary underline"
+                  >
                     <item.icon />
 
                     <a href={item.link} target="_blank">
