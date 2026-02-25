@@ -35,20 +35,24 @@ export default function About() {
           Sobre mim
         </h2>
 
-        <p className="text-secondary text-xl">
-          Sou Rafhael Augusto, formado em Full Stack Python pela EBAC. Meu
-          interesse por tecnologia começou aos 13 anos, criando jogos e
-          estudando programação de forma autodidata. Aos 17, decidi seguir
-          carreira em desenvolvimento web e desde então venho me dedicando a
-          projetos práticos e estudos contínuos. <br /> <br />
-          Atuo no front-end com HTML, CSS, TypeScript e React, utilizando
-          Next.js, Vite, Tailwind CSS e Styled Components para criar interfaces
-          responsivas e bem estruturadas. <br /> <br />
-          No back-end, trabalho com Python e Django, desenvolvendo APIs RESTful,
-          integrando PostgreSQL e realizando deploys com Render, Vercel, Nginx e
-          Gunicorn. <br /> <br /> Tenho familiaridade com Git/GitHub, Linux e
-          ambientes virtuais. Sou curioso, organizado e valorizo a evolução
-          constante e o trabalho em equipe.
+        <p className="whitespace-pre-line text-secondary text-xl">
+          {`Sou Rafhael Augusto, Desenvolvedor Full Stack com foco em aplicações
+          modernas utilizando Next.js (frontend e backend), TypeScript e
+          PostgreSQL. 
+          
+          Meu interesse por tecnologia começou aos 13 anos, criando
+          jogos e estudando programação de forma autodidata. Aos 17, decidi
+          seguir carreira em desenvolvimento web e desde então venho me
+          dedicando a projetos práticos e estudos contínuos. 
+          
+          Atuo no desenvolvimento de aplicações completas com Next.js, construindo
+          interfaces consistentes com TailwindCSS e shadcn/ui. No backend,
+          trabalho com APIs server-side integradas ao PostgreSQL utilizando
+          Prisma ORM para modelagem e manipulação de dados. 
+          
+          Possuo experiência com versionamento utilizando Git e GitHub, além 
+          de familiaridade com ambientes Linux. Sou curioso, organizado e 
+          valorizo a evolução constante e o desenvolvimento de soluções bem estruturadas.`}
         </p>
       </div>
 
