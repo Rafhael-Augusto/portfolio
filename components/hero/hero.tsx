@@ -1,5 +1,5 @@
 "use client";
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 import { motion, useAnimation } from "motion/react";
@@ -70,7 +70,7 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
     };
 
     startAnimation();
-  }, []);
+  }, [videoRef, titleControls, underlineControls]);
 
   return (
     <div className="relative h-screen w-screen text-white text-center">

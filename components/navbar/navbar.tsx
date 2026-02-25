@@ -24,12 +24,6 @@ const navItems = [
     targetId: "contact",
   },
 ];
-
-type props = {
-  isLoaded: boolean;
-  setIsLoaded: Dispatch<SetStateAction<boolean>>;
-};
-
 export default function Navbar() {
   return (
     <div

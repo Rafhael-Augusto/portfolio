@@ -31,7 +31,7 @@ function LaptopModel({ isVisible }: props) {
       action.clampWhenFinished = true;
       action.play();
     });
-  }, [isVisible]);
+  }, [isVisible, actions]);
 
   useFrame((state) => {
     if (group.current) {

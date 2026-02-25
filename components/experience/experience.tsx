@@ -38,7 +38,7 @@ export default function Experience() {
     <div
       ref={ref}
       className={cn(
-        "p-16 min-h-220 bg-primary/30 opacity-0 transition-all duration-700",
+        "p-16 min-h-220 bg-primary/30 opacity-0 transition-opacity duration-700",
         isVisible && "opacity-100",
       )}
     >

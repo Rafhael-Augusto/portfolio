@@ -21,7 +21,7 @@ export default function About() {
     <div
       ref={ref}
       className={cn(
-        "flex items-center justify-between p-16 bg-primary/50 opacity-0 transition-all duration-700",
+        "flex items-center justify-between p-16 bg-primary/50 opacity-0 transition-opacity duration-700",
         isVisible && "opacity-100",
       )}
     >
