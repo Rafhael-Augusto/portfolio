@@ -7,6 +7,7 @@ import About from "@/components/about/about";
 import Experience from "@/components/experience/experience";
 import Projects from "@/components/projects/projects";
 import { cn } from "@/lib/utils";
+import { Footer } from "@/components/footer/footer";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,6 +23,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <Footer />
       </div>
     </div>
   );

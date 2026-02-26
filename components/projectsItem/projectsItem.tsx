@@ -78,9 +78,9 @@ export default function ProjectsItem({ data, handleClick, openId }: props) {
         onMouseEnter={() => handleHoverEnter()}
         onMouseLeave={() => handleHoverLeave()}
         className={cn(
-          "h-104 w-104 z-10 pb-2 overflow-y-scroll hover:scale-105 bg-primary/50 rounded-xl cursor-pointer",
+          "w-104 z-10 pb-2 overflow-y-scroll hover:scale-105 bg-primary/50 rounded-xl cursor-pointer",
           isOpen &&
-            "absolute h-2/3 w-1/2 top-1/2 hover:scale-100 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default",
+            "absolute h-full w-1/2 top-1/2 hover:scale-100 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-default",
         )}
       >
         <div className={cn("p-4 h-full", isOpen && "h-2/3 bg-secondary/5")}>
@@ -114,7 +114,11 @@ export default function ProjectsItem({ data, handleClick, openId }: props) {
                   >
                     <item.icon />
 
-                    <a href={item.link} target="_blank">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {item.name}
                     </a>
                   </div>

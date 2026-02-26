@@ -114,7 +114,7 @@ export default function Hero({ isLoaded, setIsLoaded }: props) {
 
       <div
         className={cn(
-          "absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit opacity-0 transition-all duration-1000",
+          "absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit opacity-0 transition-opacity duration-1000",
           isLoaded && "opacity-100",
         )}
       >

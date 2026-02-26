@@ -190,7 +190,7 @@ export default function Projects() {
         Projetos
       </h2>
 
-      <div ref={itemRef} className="grid grid-cols-3 gap-8 mt-16 min-h-220">
+      <div ref={itemRef} className="grid grid-cols-3 gap-8 mt-16 min-h-136">
         {projects.map((item) => {
           if (openId === item.id || openId === null) {
             return (
