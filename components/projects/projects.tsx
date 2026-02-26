@@ -1,11 +1,17 @@
+"use client";
+
 import { useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 import { useInView } from "@/hooks/useInView";
 
+import { ProjectsItem } from "@/components/projectsItem/projectsItem";
+
 import { BBH_Hegarty } from "next/font/google";
 
+import { ChartAreaIcon } from "lucide-react";
+import { MdAnimation } from "react-icons/md";
 import {
   SiBlender,
   SiGithub,
@@ -20,11 +26,6 @@ import {
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
-
-import { ChartAreaIcon } from "lucide-react";
-import { MdAnimation } from "react-icons/md";
-
-import ProjectsItem from "../projectsItem/projectsItem";
 
 const smooch_sans = BBH_Hegarty({
   subsets: ["latin"],
@@ -151,7 +152,7 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export function Projects() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   const { ref, isVisible } = useInView<HTMLDivElement>({

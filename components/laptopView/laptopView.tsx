@@ -1,10 +1,14 @@
+"use client";
+
 import { useRef, useEffect } from "react";
+
+import { cn } from "@/lib/utils";
+
+import { LoopOnce, Group } from "three";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 import { useInView } from "@/hooks/useInView";
 
-import { cn } from "@/lib/utils";
-import { LoopOnce, Group } from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
 import {
   OrbitControls,
   useGLTF,

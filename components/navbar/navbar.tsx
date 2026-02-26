@@ -1,8 +1,7 @@
-"use client";
 import { cn } from "@/lib/utils";
 
-import { Button } from "../ui/button";
-import { ButtonGroup } from "../ui/button-group";
+import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
 
 const navItems = [
   {
@@ -22,7 +21,7 @@ const navItems = [
     targetId: "contact",
   },
 ];
-export default function Navbar() {
+export function Navbar() {
   return (
     <div
       className={cn(

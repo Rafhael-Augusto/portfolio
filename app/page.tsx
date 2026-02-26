@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 
-import Hero from "@/components/hero/hero";
-import Navbar from "@/components/navbar/navbar";
-import About from "@/components/about/about";
-import Experience from "@/components/experience/experience";
-import Projects from "@/components/projects/projects";
 import { cn } from "@/lib/utils";
+
+import { Hero } from "@/components/hero/hero";
+import { Navbar } from "@/components/navbar/navbar";
+import { About } from "@/components/about/about";
+import { Experience } from "@/components/experience/experience";
+import { Projects } from "@/components/projects/projects";
 import { Footer } from "@/components/footer/footer";
 
 export default function Home() {

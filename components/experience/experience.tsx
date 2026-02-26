@@ -4,7 +4,7 @@ import { useInView } from "@/hooks/useInView";
 
 import { BBH_Hegarty } from "next/font/google";
 
-import ExperienceItem from "../experienceItem/experienceItem";
+import { ExperienceItem } from "@/components/experienceItem/experienceItem";
 
 const smooch_sans = BBH_Hegarty({
   subsets: ["latin"],
@@ -29,7 +29,7 @@ const experienceList = [
   },
 ];
 
-export default function Experience() {
+export function Experience() {
   const { ref, isVisible } = useInView<HTMLDivElement>({
     threshold: 0.4,
   });

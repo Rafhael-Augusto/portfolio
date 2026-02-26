@@ -1,4 +1,5 @@
 "use client";
+
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
@@ -49,7 +50,7 @@ type props = {
   setIsLoaded: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function Hero({ isLoaded, setIsLoaded }: props) {
+export function Hero({ isLoaded, setIsLoaded }: props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const titleControls = useAnimation();

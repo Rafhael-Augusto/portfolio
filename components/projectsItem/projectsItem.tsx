@@ -1,10 +1,16 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
-
 import { IconType } from "react-icons";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type Links = {
   name: string;
@@ -30,7 +36,7 @@ type props = {
   };
 };
 
-export default function ProjectsItem({ data, handleClick, openId }: props) {
+export function ProjectsItem({ data, handleClick, openId }: props) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const isOpen = openId === data.id;

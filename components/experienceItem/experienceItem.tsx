@@ -7,7 +7,7 @@ type props = {
   };
 };
 
-export default function ExperienceItem({ data }: props) {
+export function ExperienceItem({ data }: props) {
   return (
     <div className="hover:scale-105 hover:border-zinc-600 text-start rounded-xl border border-zinc-800 bg-primary/60 p-8 transition-all min-h-64">
       <div>

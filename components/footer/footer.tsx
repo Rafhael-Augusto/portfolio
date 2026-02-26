@@ -23,7 +23,7 @@ export function Footer() {
     <div className="text-secondary">
       <ul className="flex items-center justify-center gap-8">
         {contacts.map((item) => (
-          <li>
+          <li key={item.label}>
             <div className="flex items-center gap-2 text-lg underline">
               <item.icon />
 
